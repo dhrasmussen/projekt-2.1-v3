@@ -13,6 +13,7 @@ class color:
 
 tid=0.2
 tid2=3
+tid3=2
 linksmfiber1550=0
 linksmfiber1310=0
 
@@ -51,7 +52,15 @@ def udregnsm():
     print("- Attenauation at 1550nm 0,21dB/km")
     print("")
     time.sleep(tid)
+
     km = float(input("Indtast tallet for km: "))
+    if km >= 51:
+
+
+        print("Prøv igen, afstanden er for stor")
+        time.sleep(tid3)
+        udregnsm()
+
     splidsninger = int(input("Indtast antal forventet splidsninger: "))
     konnekteringer = int(input("Indtast antal forventet konnekteringer: "))
     time.sleep(tid)
@@ -88,4 +97,20 @@ def udregnsm():
     print(color.BOLD + "Ved brug af SM1550 skal den valgte mediekonverter understøtte ", color.PURPLE + str(linksmfiber1550) + color.END, color.BOLD + "dB" + color.END)
     print("")
 
+
+
+    File_navn=input("Indtast projektnavnet (slut med .txt) ")
+    f = open(File_navn, "a") # Filen åbnes og nu kan der adder noget tekst til den
+    string2=str(linksmfiber1310)
+    string2="\n"+"Ved brug af SM1310 skal den valgte mediekonverter understøtte: "+string2+"dB"+"\n" # \n laver en ny line i filen
+    f.write(string2)
+
+    string3=str(linksmfiber1550)
+    string3="Ved brug af SM1550 skal den valgte mediekonverter understøtte: "+string3+"dB" +"\n" # \n laver en ny line i filen
+    f.write(string3)
+    f.close()
+    print("-----------------------------------------------------------------------------------------------------------")
     time.sleep(tid2)
+    #string1=input("Hvem er Ansvarlig for projektet: ")
+    #string1=File_navn+"\n"+"Ansvarlig: "+string1+"\n" # \n laver en ny line i filen
+    #f.write(string1) #string1 skrives til filen

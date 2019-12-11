@@ -95,5 +95,17 @@ def udregnmm():
 
     print(color.BOLD + "Ved brug af MM1300 skal den valgte mediekonverter understøtte ", color.BLUE + str(linkmmfiber1300) + color.END, color.BOLD + "dB" + color.END)
     print("")
+
+    File_navn=input("Indtast projektnavnet (slut med .txt) ")
+    f = open(File_navn, "a") # Filen åbnes og nu kan der adder noget tekst til den
+    string4=str(linkmmfiber850)
+    string4="\n"+"Ved brug af MM850 skal den valgte mediekonverter understøtte: "+string4+"dB"+"\n" # \n laver en ny line i filen
+    f.write(string4)
+
+    string5=str(linkmmfiber1300)
+    string5="Ved brug af MM1300 skal den valgte mediekonverter understøtte: "+string5+"dB" +"\n" # \n laver en ny line i filen
+    f.write(string5)
+    f.close()
+    print("-----------------------------------------------------------------------------------------------------------")
     time.sleep(tid2)
 

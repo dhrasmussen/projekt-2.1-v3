@@ -14,6 +14,7 @@ class color:
 
 tid=0.2
 tid2=3
+tid3=2
 
 def gravby():
 
@@ -29,7 +30,7 @@ def gravby():
     time.sleep(tid)
 
     print("")
-    print("Du har valgt udgravning by")
+    print("Du har valgt kabelgedgravning")
     print("Udfyld felterne her under med værdier")
     print("")
 
@@ -45,7 +46,7 @@ def gravby():
     storby = strby*Storby
     underboring = ubor*Underboring
 
-    totalpris = str(landevej+landsby+storby+underboring)
+    totalpris = str(landevej+landsby+storby+underboring,)
 
     time.sleep(tid)
 
@@ -55,9 +56,35 @@ def gravby():
     print("Prisen for storby", storby,"kr")
     print("Prisen for underboring", underboring,"kr")
     print("")
-    print(color.BOLD + "Samlet pris", color.RED + totalpris + color.END, color.BOLD + "kr inkl. moms" + color.END)
+    print(color.BOLD + "Samlet pris for kabelnedgravning", color.RED + totalpris + color.END, color.BOLD + "kr inkl. moms" + color.END)
     print("")
 
+    File_navn=input("Indtast projektnavnet (slut med .txt) ")
+    f = open(File_navn, "a") # Filen åbnes og nu kan der adder noget tekst til den
+    string6=str(landevej)
+    string6="\n"+"Prisen for landevej: "+string6+"kr inkl. moms"+"\n" # \n laver en ny line i filen
+    f.write(string6)
+
+    string7=str(landsby)
+    string7="Prisen for landsby: "+string7+"kr inkl. moms" +"\n" # \n laver en ny line i filen
+    f.write(string7)
+
+    string8=str(storby)
+    string8="Prisen for storby: "+string8+"kr inkl. moms" +"\n" # \n laver en ny line i filen
+    f.write(string8)
+
+    string9=str(underboring)
+    string9="Prisen for underboring: "+string9+"kr inkl. moms" +"\n" # \n laver en ny line i filen
+    f.write(string9)
+
+    string10=str(totalpris)
+    string10="samlet pris for kabelnedgravning: "+string10+"kr inkl. moms" +"\n" # \n laver en ny line i filen
+    f.write(string10)
+    f.close()
+
+
+
+    print("-----------------------------------------------------------------------------------------------------------")
     time.sleep(tid2)
 
 

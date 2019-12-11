@@ -11,6 +11,15 @@ def prmenu():
     print("")
 
 prmenu()
+print("Inden vi starter opret da en fil til resultaterne")
+if __name__ == "__main__":
+    File_navn=input("Indtast projektnavnet (slut med .txt) ")
+    f = open(File_navn, "w") #Filen oprettes og hvis der eksistere en i forvejen overskrives den!
+    string1=input("Hvem er Ansvarlig for projektet: ")
+    string1=File_navn+"\n"+"Ansvarlig: "+string1+"\n" # \n laver en ny line i filen
+    f.write(string1) #string1 skrives til filen
+    f.close() # Filen lukkes ned
+
 taller=int(input("Vælg Menu: "))
 
 
