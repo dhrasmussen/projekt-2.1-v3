@@ -1,4 +1,6 @@
-#def gravland():
+
+
+#def undergrav
 
     nedgravning = 100 #kr pr m
     underboring = 1000 #kr pr m
@@ -17,8 +19,3 @@
     underbor = ubor*underboring
     totalpris = nedgrav+underbor
 
-    print("")
-    print("Prisen for nedgravning", nedgrav,"kr")
-    print("Prisen for underboring", underbor,"kr")
-    print("Samlet pris for gravning", totalpris,"kr inkl. moms")
-    print("")

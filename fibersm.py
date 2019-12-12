@@ -53,7 +53,7 @@ def udregnsm():
     print("")
     time.sleep(tid)
 
-    km = float(input("Indtast tallet for km: "))
+    km = float(input("Indtast tallet for km (max.50): "))
     if km >= 51:
 
 
@@ -99,7 +99,7 @@ def udregnsm():
 
 
 
-    File_navn=input("Indtast projektnavnet (slut med .txt) ")
+    File_navn=input("Indtast projektnavnet")
     f = open(File_navn, "a") # Filen åbnes og nu kan der adder noget tekst til den
     string2=str(linksmfiber1310)
     string2="\n"+"Ved brug af SM1310 skal den valgte mediekonverter understøtte: "+string2+"dB"+"\n" # \n laver en ny line i filen
@@ -109,8 +109,8 @@ def udregnsm():
     string3="Ved brug af SM1550 skal den valgte mediekonverter understøtte: "+string3+"dB" +"\n" # \n laver en ny line i filen
     f.write(string3)
     f.close()
-    print("-----------------------------------------------------------------------------------------------------------")
-    time.sleep(tid2)
+    print("------------------------------------------------------------------------")
+    time.sleep(tid3)
     #string1=input("Hvem er Ansvarlig for projektet: ")
     #string1=File_navn+"\n"+"Ansvarlig: "+string1+"\n" # \n laver en ny line i filen
     #f.write(string1) #string1 skrives til filen

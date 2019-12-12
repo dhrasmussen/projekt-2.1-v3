@@ -51,7 +51,7 @@ def udregnmm():
 
     time.sleep(tid)
 
-    meter = int(input("Indtast tallet i meter: "))
+    meter = int(input("Indtast tallet i meter(max 2000): "))
     if meter >= 2001:
 
         print("Prøv igen, afstanden er for stor")
@@ -96,7 +96,7 @@ def udregnmm():
     print(color.BOLD + "Ved brug af MM1300 skal den valgte mediekonverter understøtte ", color.BLUE + str(linkmmfiber1300) + color.END, color.BOLD + "dB" + color.END)
     print("")
 
-    File_navn=input("Indtast projektnavnet (slut med .txt) ")
+    File_navn=input("Indtast projektnavnet")
     f = open(File_navn, "a") # Filen åbnes og nu kan der adder noget tekst til den
     string4=str(linkmmfiber850)
     string4="\n"+"Ved brug af MM850 skal den valgte mediekonverter understøtte: "+string4+"dB"+"\n" # \n laver en ny line i filen
@@ -106,6 +106,5 @@ def udregnmm():
     string5="Ved brug af MM1300 skal den valgte mediekonverter understøtte: "+string5+"dB" +"\n" # \n laver en ny line i filen
     f.write(string5)
     f.close()
-    print("-----------------------------------------------------------------------------------------------------------")
-    time.sleep(tid2)
-
+    print("------------------------------------------------------------------------")
+    time.sleep(tid3)

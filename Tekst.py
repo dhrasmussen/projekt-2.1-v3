@@ -1,3 +1,6 @@
-import locale
-locale.setlocale( locale.LC_ALL, 'English_United States.1252' )
-locale.currency( 1234.50, grouping = True )
+#opdeling ag tal i penge
+nx = float(input("Indtast tallet for km: "))
+def place_value(number):
+    return ("{:,}".format(number))
+
+print(place_value(nx))

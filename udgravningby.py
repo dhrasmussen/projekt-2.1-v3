@@ -16,6 +16,9 @@ tid=0.2
 tid2=3
 tid3=2
 
+def place_value(number):
+    return ("{:,}".format(number))
+
 def gravby():
 
 
@@ -46,20 +49,21 @@ def gravby():
     storby = strby*Storby
     underboring = ubor*Underboring
 
-    totalpris = str(landevej+landsby+storby+underboring,)
+    totalpris = landevej+landsby+storby+underboring
 
     time.sleep(tid)
 
     print("")
-    print("Prisen for landevej", landevej,"kr")
-    print("Prisen for landsby", landsby,"kr")
-    print("Prisen for storby", storby,"kr")
-    print("Prisen for underboring", underboring,"kr")
-    print("")
-    print(color.BOLD + "Samlet pris for kabelnedgravning", color.RED + totalpris + color.END, color.BOLD + "kr inkl. moms" + color.END)
+    print("Prisen for landevej", (place_value(landevej)),"kr")
+    print("Prisen for landsby", (place_value(landsby)),"kr")
+    print("Prisen for storby", (place_value(storby)),"kr")
+    print("Prisen for underboring", (place_value(underboring)),"kr")
     print("")
 
-    File_navn=input("Indtast projektnavnet (slut med .txt) ")
+    print(color.BOLD + "Samlet pris for kabelnedgravning", color.RED + place_value(totalpris) + color.END, color.BOLD + "kr inkl. moms" + color.END)
+    print("")
+
+    File_navn=input("Indtast projektnavnet")
     f = open(File_navn, "a") # Filen åbnes og nu kan der adder noget tekst til den
     string6=str(landevej)
     string6="\n"+"Prisen for landevej: "+string6+"kr inkl. moms"+"\n" # \n laver en ny line i filen
@@ -78,18 +82,8 @@ def gravby():
     f.write(string9)
 
     string10=str(totalpris)
-    string10="samlet pris for kabelnedgravning: "+string10+"kr inkl. moms" +"\n" # \n laver en ny line i filen
+    string10="Samlet pris for kabelnedgravning: "+string10+"kr inkl. moms" +"\n" # \n laver en ny line i filen
     f.write(string10)
     f.close()
-
-
-
-    print("-----------------------------------------------------------------------------------------------------------")
-    time.sleep(tid2)
-
-
-
-
-
-#print(color.BOLD + 'Hello World !' + color.END)
-
+    print("------------------------------------------------------------------------")
+    time.sleep(tid3)
