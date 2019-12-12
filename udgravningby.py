@@ -65,23 +65,23 @@ def gravby():
 
     File_navn=input("Indtast projektnavnet")
     f = open(File_navn, "a") # Filen åbnes og nu kan der adder noget tekst til den
-    string6=str(landevej)
+    string6=str(place_value(landevej))
     string6="\n"+"Prisen for landevej: "+string6+"kr inkl. moms"+"\n" # \n laver en ny line i filen
     f.write(string6)
 
-    string7=str(landsby)
+    string7=str(place_value(landsby))
     string7="Prisen for landsby: "+string7+"kr inkl. moms" +"\n" # \n laver en ny line i filen
     f.write(string7)
 
-    string8=str(storby)
+    string8=str(place_value(storby))
     string8="Prisen for storby: "+string8+"kr inkl. moms" +"\n" # \n laver en ny line i filen
     f.write(string8)
 
-    string9=str(underboring)
+    string9=str(place_value(underboring))
     string9="Prisen for underboring: "+string9+"kr inkl. moms" +"\n" # \n laver en ny line i filen
     f.write(string9)
 
-    string10=str(totalpris)
+    string10=str(place_value(totalpris))
     string10="Samlet pris for kabelnedgravning: "+string10+"kr inkl. moms" +"\n" # \n laver en ny line i filen
     f.write(string10)
     f.close()
